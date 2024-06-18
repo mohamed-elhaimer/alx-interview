@@ -1,0 +1,1 @@
+task about minimum operation
