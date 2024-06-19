@@ -24,12 +24,11 @@ def minOperations(n: int) -> int:
         return 0
 
     result = []
-    primes = nmbr_premier(n)
+    diviseur = 2
 
     while n > 1:
-        for prime in primes:
-            while n % prime == 0:
-                result.append(prime)
-                n /= prime
-
+        while n % diviseur == 0:
+            result.append(diviseur)
+            n //= diviseur
+        diviseur += 1
     return sum(result)
